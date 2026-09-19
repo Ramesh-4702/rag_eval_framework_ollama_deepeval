@@ -49,3 +49,54 @@ rag-eval-framework-ollama-deepeval/
 ├── .gitignore                  # Git ignore file
 └── requirements.txt            # Project dependencies
 ```
+
+
+## Setup & Installation
+
+### 1. Prerequisites
+
+Install [Ollama](https://ollama.com), start the service, and pull the required models:
+
+```bash
+ollama pull llama3.2
+ollama pull qwen2.5:7b
+ollama pull nomic-embed-text
+```
+
+### 2. Environment Setup
+
+Clone the repository and set up a Python virtual environment:
+
+```bash
+# Clone repository
+git clone https://github.com/Ramesh-4702/rag_eval_framework_ollama_deepeval.gitt
+cd rag-eval-framework-ollama-deepeval
+
+# Create and activate virtual environment
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1   # On Windows (PowerShell)
+# source .venv/bin/activate    # On Linux/macOS
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+### 1. Synthesize Golden Test Dataset
+
+Generate synthetic question-answer-context tuples from your local knowledge base:
+
+```bash
+python generate_goldens.py
+```
+
+### 2. Run Automated Evaluation Suite
+
+Execute the evaluation tests and view detailed live metric scores and reasoning in your terminal:
+
+```bash
+deepeval test run tests/test_rag.py -- -s -rA
+```
