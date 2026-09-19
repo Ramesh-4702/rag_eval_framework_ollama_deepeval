@@ -1,0 +1,23 @@
+====================================================================
+ACME CLOUD QA & SLA PLATFORM POLICIES
+====================================================================
+
+1. SERVICE LEVEL AGREEMENTS (SLA) & UPTIME
+- Enterprise Tier guarantees 99.99% monthly uptime. If uptime drops below 99.99%, customers receive a 15% service credit. If uptime drops below 99.0%, customers receive a 30% credit.
+- Standard Tier guarantees 99.5% uptime with no monetary credits provided for downtime.
+- Maintenance Window: Planned maintenance occurs every 2nd Sunday between 01:00 UTC and 04:00 UTC. Downtime during planned maintenance does not count toward SLA violations.
+
+2. BUG RESOLUTION SEVERITY LEVELS
+- Critical (Sev-1): System down, core data corruption, or major security breach. Initial response within 15 minutes; target resolution within 4 hours.
+- High (Sev-2): Major functionality impaired with no workaround. Initial response within 1 hour; target resolution within 24 hours.
+- Medium (Sev-3): Minor feature failure with an available workaround. Initial response within 8 hours; target resolution within 5 business days.
+- Low (Sev-4): Cosmetic issues or feature requests. Initial response within 24 hours; resolved in future release cycles.
+
+3. DATA RETENTION AND PRIVACY
+- Audit logs are retained for 365 days for Enterprise accounts and 90 days for Standard accounts.
+- Deleted account data is permanently purged from backup servers within 45 calendar days.
+- Encryption: All data at rest is encrypted using AES-256. Data in transit is secured using TLS 1.3.
+
+4. REFUND AND CANCELLATION
+- Subscriptions can be canceled at any time from the account dashboard.
+- Full refunds are issued only if requested within 14 days of initial purchase. Pro-rated refunds are not available after the 14-day window.
